@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>FUNCTION</h1>
+    <p>TYPE OF FUNCTION</p>
+    <ul>
+        <li>
+            function declaration
+        </li>
+        <li>function exression</li>
+        <li>function constructor</li>
+        <li> I I F E</li>
+        <li>first class function </li>
+        <li>high order function</li>
+        <li>call back function</li>
+        <li>closure</li>
+    </ul>
+
+    <h3>function</h3>
+    <p>function is a peace of code it will be used for reusibility it meance write once call multiple times</p>
+
+    <h3>function declaration</h3>
+    <pre>
+        function abc(){
+            console.log('abs');
+        }
+        abc()
+    </pre>
+    <h3>three type function declaration</h3>
+    <ul>
+        <li>
+       function without parameter and without return
+       </li>
+    
+    <li>function with parameter and without return</li>
+
+    <li>function without parameter with return</li>
+    
+    </ul>
+    <h3>function with parameter and without return</h3>
+    <pre>
+        function abc(a){
+            console.log('hello'+" "+a);
+        }
+        abc('abcd')
+    </pre>
+
+
+    <h3>function without parameter with return</h3>
+    <pre>
+        function abc(){
+            return('amit');
+        }
+        var result=abc()
+        console.log(result);
+    </pre>
+
+    <h3> function expression</h3>
+
+    <pre>var abc=function(){
+        console.log('name');
+    }
+    abc()</pre>
+
+
+    <h3>function constructor</h3>
+    <p>the function constructor create a new function object calling a constructor directly  create function dynamically</p>
+    <p>This is less efficient than declaring a function with a function expression or function statement </p>
+     
+    <pre>
+        const sum= new Function('a','b','return a+b')
+             console.log(sum(2,5));
+    </pre>
+
+    <h3> IIFE</h3>
+    <p>that runs as soon as define</p>
+    <p>it is same as the function declaration  only deffrence is call it self</p>
+    <pre>
+        (function name(){
+            console.log('name');
+        })()
+    </pre>
+
+    <h2>first class function</h2>
+    <p> a programming language is said to be first class function when function that programming language function treated as a other   variable in such language function pass as a argument to other function and return by another function can be assign a value to a variable</p>
+  <p>function can be assign a value</p>
+
+
+
+  <ul>
+      <li>
+          function can be pass as a argument to another function
+      </li>
+      <li> a function can be return by another function</li>
+      <li>function can be assign as an value</li>
+  </ul>
+  <pre>
+    function abc(){
+        return function xyz(){
+            console.log('hello');
+        }
+    }
+    abc()()
+  </pre>
+
+  <h3> CALLBACK FUNCTION</h3>
+  <p> a callback function is a function passed into another function as an argument  which is invoked inside the outar  function</p>
+  <pre>
+    function abc(param){
+        param()
+    console.log('hello');
+        
+    }
+    function xyz(){
+    console.log('world');
+    }
+    abc(xyz)
+  </pre>
+
+  <h3>high order function</h3>
+  <p>highorder function which accept the another function as an argument or return a function</p>
+  <p>a function that return a function is lkow as high order function</p>
+
+  <pre>
+    function abc(){
+        return function xyx(){
+            console.log('hello world');
+        }
+    }
+    var result =abc()
+    result()
+  </pre>
+
+    <script src="script.js"></script>
+</body>
+</html>
